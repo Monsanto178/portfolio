@@ -1,0 +1,59 @@
+
+/* Palette 1
+#E4EEFF
+#CFDFFF
+#A8C2FF
+#7499FF
+#3E5CFF
+#1322FF
+#000aff
+#000aff
+#0009e4
+#0001b0
+#01002a */
+
+Card Colors
+#1E1E3F     //Most factible
+/* #2E2E59 */
+#21234B
+
+Card Text
+#E0E0E0
+#D1D1D1
+
+#A0A0A0
+
+Card Btn
+#6C63FF
+#00A9E0
+
+
+background
+#01002A
+#001b36   to  #2da0e3
+#2c9fe3
+
+navbar
+#01001a   or   #01001e
+#001b36
+
+text
+#E5E5E5
+#D1D5DB
+#F8FAFC
+
+btns
+#F59E0B
+#10B981
+
+shadown
+#1A1C29
+#3B485A
+
+additionals
+#9B4D96
+#7F00FF
+
+hover/focus
+#3B82F6
+#2563EB
