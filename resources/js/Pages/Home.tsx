@@ -1,33 +1,6 @@
-import { ProjectType } from '@/types';
-import { Banner, Navbar, PresentCard, StarsBg, ProjectCard, About, Skills} from '../Components';
-import image from '@assets/projects/mangaTail.png';
-import { LucideActivity, LucideAlbum, LucideEarthLock } from 'lucide-react';
+import { Banner, Navbar, PresentCard, StarsBg, ProjectCard, About, Skills} from '@/Components';
+import { projects } from '@/data/projects';
 import { useLang } from '@/Context/LangContext';
-
-const project: ProjectType = {
-    title: 'MangaTail',
-    github: '#',
-    deploy: '#',
-    tecnologies: [
-        {name: 'Laravel', icon: <LucideEarthLock />},
-        {name: 'React', icon: <LucideActivity />},
-        {name: 'TypeScript', icon: <LucideAlbum />},
-    ],
-    images: [image],
-    description: `A manga website created with Laravel, React & TypeScript.
-        In this project I used inertiaJs for integrate the backend with the frontend.
-        The project consist in a website that consume an api from Jikan Moe (an unnofficial api from MyAnimeList).
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore amet voluptatibus iure consequatur ullam, 
-        minus doloribus quam cupiditate quis, laborum, labore eum nihil debitis animi laboriosam dolor quod modi enim?
-        Necessitatibus perspiciatis atque eaque quasi deleniti tempore fuga vel quo aliquam cumque ipsum, sint 
-        nesciunt blanditiis, animi amet repellat libero esse voluptatum earum accusantium facilis quibusdam culpa recusandae! Facilis?`,
-    details: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore amet voluptatibus iure consequatur ullam, 
-        minus doloribus quam cupiditate quis, laborum, labore eum nihil debitis animi laboriosam dolor quod modi enim?
-        Necessitatibus perspiciatis atque eaque quasi deleniti tempore fuga vel quo aliquam cumque ipsum, sint 
-        illum unde nostrum minima repudiandae explicabo dolorem quae nihil magni porro culpa ea, eius eos? Cupiditate.
-        Consequuntur vel maxime odit perspiciatis quia fugit dolore sequi, vitae molestias nam, eius eveniet alias 
-        nesciunt blanditiis, animi amet repellat libero esse voluptatum earum accusantium facilis quibusdam culpa recusandae! Facilis?`
-}
 
 export default function Home() {
     const {lang} = useLang();
@@ -43,11 +16,14 @@ export default function Home() {
                     <span>{lang === 'en' ? 'My' : 'Mis'}</span>
                     <span className='text-[#2c9fe3]'> {lang === 'en' ? 'Projects' : 'Proyectos'}</span>
                 </h2>
-                <ProjectCard project={project}/>
 
-                <ProjectCard project={project}/>
-
-                <ProjectCard project={project}/>
+                <section className='flex flex-col gap-y-12'>
+                    {projects.map((project, idx) => {
+                        return (
+                            <ProjectCard key={idx} project={project}/>
+                        )
+                    })}
+                </section>
 
             </section>
 

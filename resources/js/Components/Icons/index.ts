@@ -11,3 +11,4 @@ export * from './IconPhp';
 export * from './IconReact';
 export * from './IconTS';
 export * from './IconTailwind';
+export * from './IconInertiaJs';

@@ -1,13 +1,39 @@
-import { Circle, LucideGlobe } from "lucide-react";
+import { LucideGlobe } from "lucide-react";
 import { ProjectType } from "@/types";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { ImgContainer } from "../ImgContainer/ImgContainer";
+import { useLang } from "@/Context/LangContext";
 
 interface Props {
     project: ProjectType;
 }
+const displayFeatures = (language:string, project: ProjectType) => {
+    if(language === 'en') {
+        return project.features.en.map((el, idx) => {
+            const [before, after] = el.split(':');
+            return (
+                <li key={idx}>
+                    <strong>{before}:</strong>
+                    <span>{after}</span>
+                </li>
+            )
+        })
+    }
+
+    return project.features.es.map((el, idx) => {
+        const [before, after] = el.split(':');
+        return (
+            <li key={idx}>
+                <strong>{before}:</strong>
+                <span>{after}</span>
+            </li>
+        )
+    })
+}
 
 export const ProjectCard = ({project}: Props) => {
+    const {lang} = useLang();
     const projectRef = useRef<HTMLElement | null>(null);
     const inView = useInView(projectRef, {
         once:false,
@@ -16,22 +42,17 @@ export const ProjectCard = ({project}: Props) => {
     
     return (
         <article ref={projectRef}
-            className={`flex flex-col items-start justify-center min-h-[80vh] mt-15 sm:mt-2
+            className={`flex flex-col w-full items-start md:items-center justify-center min-h-[80vh] mt-15 sm:mt-2
                 ${inView ? 'animate-appear' : 'animate-disappear'}`}>
-            <div className="flex flex-col justify-between items-start md:flex-row gap-4">
-                <div className="flex flex-col gap-y-4 bg-[#1E1E3F] p-4 min-w-[45%] h-fit rounded-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
+            <div className="flex flex-col justify-between items-start lg:items-start lg:flex-row gap-4">
+                <div className="flex flex-col max-w-full lg:max-w-[45dvw] md:max-w-[70dvw] gap-y-4 bg-[#1E1E3F] p-4 min-w-[40%] h-fit rounded-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
                     <strong className="text-[18px] text-[#00A9E0]">{project.title}</strong>
-                    <picture className="w-full">
-                        {project.images.map((image) => {
-                            return <img src={image} alt="project-screen" />
-                        })}
-                    </picture>
-                    <Circle size={20} fill="orange" stroke="orange"/>
+                    <ImgContainer project={project}/>
                 </div>
 
-                <div className="flex flex-col gap-y-3">
+                <div className="flex flex-col max-w-full md:max-w-[70dvw] gap-y-3">
                     <div className="flex justify-between items-center">
-                        <a href={project.github} className="flex gap-x-2 items-center">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex gap-x-2 items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="28" 
                                 height="28" 
@@ -42,19 +63,23 @@ export const ProjectCard = ({project}: Props) => {
                             </svg>
                             <span>Repo</span>
                         </a>
-                        <a href={project.deploy} className="flex gap-x-2 items-center">
+                        <a href={project.deploy} target="_blank" rel="noopener noreferrer" className="flex gap-x-2 items-center">
                             <LucideGlobe />
                             <span>Deploy</span>
                         </a>
                     </div>
 
-                    <p>{project.description}</p>
+                    <div className="flex flex-col gap-y-2">
+                        <p>{lang === 'en' ? project.description.en : project.description.es}</p>
+                        <ul className="list-disc pl-5">
+                            {displayFeatures(lang, project)}
+                        </ul>
+                    </div>
 
                     <div className="flex gap-x-2">
                         {project.tecnologies.map((el) => {
                             return (
-                                <div className="flex gap-x-2 bg-[#6C63FF] py-2 px-3 rounded-[15px] pointer-events-none">
-                                    <span>{el.name}</span>
+                                <div className="flex flex-col gap-x-2 bg-[#6C63FF] py-2 px-6 rounded-[15px]" title={el.name}>
                                     {el.icon}
                                 </div>
                             )
