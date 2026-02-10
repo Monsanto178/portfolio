@@ -34,10 +34,18 @@ export const twitterClone: ProjectType = {
         twitter_13,
     ],
     description: {
-        en:`Twitter clone developed as a practical exercise, using Laravel,
-            React, TypeScript, and TailwindCSS for styling. The integration between the backend and frontend is handled through Inertia.js`,
-        es: `Clon de Twitter desarrollado como parte de un ejercicio práctico, utilizando Laravel,
-            React, TypeScript y TailwindCSS para los estilos. La integración entre el backend y el frontend se realiza a través de Inertia.js.` 
+        en:`Twitter Clone developed as a practical exercise using Laravel, React, TypeScript, and TailwindCSS, with backend and frontend 
+            integration through Inertia.js. Users can create and publish posts, attach images or videos, and use the Fabric.js 
+            library to crop images before posting. Additionally, they can interact with posts through likes, save posts in a bookmarks section, 
+            and customize their profile (including profile picture, banner, name, and bio). To enhance performance, localStorage is used 
+            to store profile data without the need to reload the page, and the design is fully responsive across different devices.`,
+            
+        es: `Twitter Clone desarrollado como ejercicio práctico utilizando Laravel, React, TypeScript y TailwindCSS, con integración de 
+            backend y frontend a través de Inertia.js. Los usuarios pueden crear y publicar publicaciones, adjuntar imágenes o videos, y 
+            utilizar la biblioteca Fabric.js para recortar imágenes antes de publicarlas. Además, pueden interactuar con publicaciones 
+            a través de "Me gusta", guardar publicaciones en una sección de marcadores, y personalizar su perfil 
+            (incluyendo foto de perfil, banner, nombre y biografía). Para mejorar el rendimiento, se emplea localStorage para almacenar 
+            los datos del perfil sin necesidad de recargar la página, y el diseño es completamente adaptable a diferentes dispositivos.` 
     },
     features: {
         es: [
@@ -59,10 +67,5 @@ export const twitterClone: ProjectType = {
             'Responsive Design: The design automatically adapts to different screen sizes.'
         ]
     },
-    details: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore amet voluptatibus iure consequatur ullam, 
-        minus doloribus quam cupiditate quis, laborum, labore eum nihil debitis animi laboriosam dolor quod modi enim?
-        Necessitatibus perspiciatis atque eaque quasi deleniti tempore fuga vel quo aliquam cumque ipsum, sint 
-        illum unde nostrum minima repudiandae explicabo dolorem quae nihil magni porro culpa ea, eius eos? Cupiditate.
-        Consequuntur vel maxime odit perspiciatis quia fugit dolore sequi, vitae molestias nam, eius eveniet alias 
-        nesciunt blanditiis, animi amet repellat libero esse voluptatum earum accusantium facilis quibusdam culpa recusandae! Facilis?`
+    details: ``
 }

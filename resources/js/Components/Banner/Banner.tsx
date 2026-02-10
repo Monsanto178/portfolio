@@ -4,7 +4,6 @@ import firstMontains from '@assets/Montains-first-1.webp';
 import lastMontains from '@assets/Montains-last-2.webp';
 import moon from '@assets/Moon-2.webp';
 import { PresentCard } from '@/Components';
-// import { PresentCard } from '../';
 import {motion, useScroll, useTransform } from 'framer-motion';
 
 export const Banner = () => {

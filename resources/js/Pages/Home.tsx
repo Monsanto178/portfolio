@@ -1,6 +1,7 @@
-import { Banner, Navbar, PresentCard, StarsBg, ProjectCard, About, Skills} from '@/Components';
+import { Banner, Navbar, StarsBg, ProjectCard, About, Skills, ContactForm} from '@/Components';
 import { projects } from '@/data/projects';
 import { useLang } from '@/Context/LangContext';
+import contactMe from '@assets/images/contact_me.webp';
 
 export default function Home() {
     const {lang} = useLang();
@@ -36,7 +37,7 @@ export default function Home() {
                 <Skills />
             </section>
 
-            <section className='custom-margin' id='about'>
+            <section className='custom-margin min-h-screen' id='about'>
                 <h2 className='text-[28px] text-center font-bold pt-16 pb-8 sm:pb-0'>
                     <span>{lang === 'en' ? 'About' : 'Sobre'}</span>
                     <span className='text-[#2c9fe3]'> {lang === 'en' ? 'Me' : 'Mí'}</span>
@@ -44,6 +45,20 @@ export default function Home() {
 
                 <About />
             </section>
+
+            <section className='custom-margin min-h-screen flex flex-col justify-between' id='contact'>
+                <h2 className='text-[28px] text-center font-bold pt-16 pb-8 sm:pb-0'>
+                    <span>{lang === 'en' ? 'Contact' : 'Contácta'}</span>
+                    <span className='text-[#2c9fe3]'>{lang === 'en' ? ' Me' : 'me'}</span>
+                </h2>
+                <section className='mb-10 flex lg:flex-row flex-col gap-y-12 items-center'>
+                    <picture className='p-4 hidden lg:block'>
+                        <img className='max-w-full max-h-full' draggable={false} src={contactMe} alt="contact" />
+                    </picture>
+                    <ContactForm />
+                </section>
+            </section>
+
         </section>
     )
 }

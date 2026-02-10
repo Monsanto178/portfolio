@@ -8,16 +8,16 @@ type Item = {
 }
 
 const items:Item[] = [
-    {name: 'Home', href:'home'},
     {name: 'Projects', href:'projects'},
     {name: 'Skills', href:'skills'},
     {name: 'About', href:'about'},
+    {name: 'Contact', href:'contact'},
 ]
 const itemsEs:Item[] = [
-    {name: 'Inicio', href:'home'},
     {name: 'Proyectos', href:'projects'},
     {name: 'Habilidades', href:'skills'},
     {name: 'Sobre Mi', href:'about'},
+    {name: 'Contacto', href:'contact'},
 ]
 
 export const Navbar = () => {
@@ -52,7 +52,7 @@ export const Navbar = () => {
                     <strong className="text-[#2c9fe3]">R</strong>
                 </a>
 
-                <div className="flex gap-x-4 text-[18px] text-white justify-center items-center">
+                <div className="flex gap-x-4 text-[16px] sm:text-[18px] text-white justify-center items-center">
                     {sections.map((item, idx) => {
                         return(
                             <a href={'#' + item.href}

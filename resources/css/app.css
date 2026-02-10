@@ -108,6 +108,10 @@ body{
            transition-all duration-300 cursor-pointer
            hover:scale-105 active:scale-95;
 }
+@utility action-button-disabled {
+    @apply px-6 py-2 rounded-full bg-[#F59E0B] opacity-50 text-black font-medium
+           transition-all duration-300 cursor-wait
+}
 @utility star {
     @apply absolute rounded-full bg-white;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);

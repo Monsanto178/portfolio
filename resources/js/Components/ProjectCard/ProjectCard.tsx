@@ -44,7 +44,7 @@ export const ProjectCard = ({project}: Props) => {
         <article ref={projectRef}
             className={`flex flex-col w-full items-start md:items-center justify-center min-h-[80vh] mt-15 sm:mt-2
                 ${inView ? 'animate-appear' : 'animate-disappear'}`}>
-            <div className="flex flex-col justify-between items-start lg:items-start lg:flex-row gap-4">
+            <div className="flex flex-col justify-between items-start lg:items-center lg:flex-row gap-4">
                 <div className="flex flex-col max-w-full lg:max-w-[45dvw] md:max-w-[70dvw] gap-y-4 bg-[#1E1E3F] p-4 min-w-[40%] h-fit rounded-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
                     <strong className="text-[18px] text-[#00A9E0]">{project.title}</strong>
                     <ImgContainer project={project}/>
@@ -71,9 +71,9 @@ export const ProjectCard = ({project}: Props) => {
 
                     <div className="flex flex-col gap-y-2">
                         <p>{lang === 'en' ? project.description.en : project.description.es}</p>
-                        <ul className="list-disc pl-5">
+                        {/* <ul className="list-disc pl-5">
                             {displayFeatures(lang, project)}
-                        </ul>
+                        </ul> */}
                     </div>
 
                     <div className="flex gap-x-2">

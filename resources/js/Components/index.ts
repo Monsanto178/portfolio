@@ -8,3 +8,4 @@ export * from './Skills/Skill';
 export * from './SkillCard/SkillCard';
 export * from './LanguageBtn/LanguageBtn';
 export * from './ImgContainer/ImgContainer';
+export * from './Form/ContacForm';

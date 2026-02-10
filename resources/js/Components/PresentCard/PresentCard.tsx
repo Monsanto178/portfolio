@@ -2,6 +2,11 @@ import { useLang } from "@/Context/LangContext"
 
 export const PresentCard = () => {
     const {lang} = useLang();
+    const handleDownloadCV = () => {
+        const endpoint = lang === 'en' ? '/download-cv-en' : '/download-cv-es';
+
+        window.location.href = endpoint;
+    }
 
     return(
         <article className="absolute inset-0 flex flex-col gap-y-4 justify-center items-center z-10">
@@ -30,7 +35,9 @@ export const PresentCard = () => {
             </div>
 
             <div className="opacity-0 animate-fade-in-delay-4">
-                <button className="action-button">
+                <button 
+                    onClick={handleDownloadCV}
+                    className="action-button">
                     {lang === 'en' ? 'Download CV' : 'Descargar CV'}
                 </button>
             </div>
