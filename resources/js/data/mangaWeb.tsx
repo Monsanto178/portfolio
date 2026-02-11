@@ -14,7 +14,7 @@ import manga_10 from '@assets/projects/mangaWeb_10.webp'
 export const mangaWeb: ProjectType = {
     title: 'MangaTail',
     github: 'https://github.com/Monsanto178/manga-website',
-    deploy: '#',
+    deploy: 'https://manga-website-production.up.railway.app/',
     tecnologies: [
         {name: 'Laravel', icon: <IconLaravel color={false}/>},
         {name: 'React', icon: <IconReact color={false}/>},
