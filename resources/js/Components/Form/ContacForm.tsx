@@ -65,7 +65,7 @@ export const ContactForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col w-full max-w-[60dvw] min-h-full min-w-full md:min-w-[45%] justify-center gap-y-6 bg-[#1E1E3F] p-4 rounded-md">
+                className="flex flex-col w-full max-w-[60dvw] min-h-full min-w-full md:min-w-[45%] justify-center gap-y-6 bg-[#1E1E3F] p-4 rounded-2xl">
                 <div className="flex flex-col gap-y-2">
                     <label htmlFor="name">{lang === 'en' ? 'Name' : 'Nombre'}</label>
                     <input type="text"

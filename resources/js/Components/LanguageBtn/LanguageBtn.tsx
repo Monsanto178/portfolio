@@ -8,7 +8,7 @@ type Flags = {
 
 const flags: Flags = {
     es:
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="sm:h-[24px] w-[28px] h-[28px] sm:w-[24px]">
             <path fill="#ffce31" d="M2 32c0 5.9 1.7 11.4 4.6 16h50.7c2.9-4.6 4.6-10.1 4.6-16s-1.7-11.4-4.6-16H6.6C3.7 20.6 2 26.1 2 32" />
             <path fill="#ed4c5c" d="M57.4 16C52.1 7.6 42.7 2 32 2S11.9 7.6 6.6 16zM6.6 48c5.3 8.4 14.7 14 25.4 14s20.1-5.6 25.4-14z" />
             <path fill="#c8b100" d="M9.2 28.7h3.2v1.8H9.2zm0 13.2h3.3v1.7H9.2z" />
@@ -45,7 +45,7 @@ const flags: Flags = {
             <path fill="#c8b100" d="m20.8 35.2l-.4 1.1l.3.1l-.2.4h.6l-.2-.4l.3-.1zm1.5 0l-.4 1.1l.3.1l-.2.4h.6l-.1-.4l.3-.1zm-.7 1.3l-.5 1.1l.3.1l-.1.4h.5l-.1-.4l.3-.1z" />
         </svg>,
     en: 
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="sm:h-[24px] w-[28px] h-[28px] sm:w-[24px]">
             <path fill="#2a5f9e" d="M22 60.3V46.5l-10.3 7.6c2.9 2.7 6.4 4.8 10.3 6.2m20 0c3.9-1.4 7.4-3.5 10.3-6.2L42 46.4zM3.7 42c.3 1 .7 1.9 1.2 2.9L8.8 42zm51.5 0l3.9 2.9c.4-.9.8-1.9 1.2-2.9z" />
             <path fill="#fff" d="M23.5 38H2.6c.3 1.4.7 2.7 1.1 4h5.1l-3.9 2.9c.8 1.7 1.7 3.2 2.8 4.7L18 42h4v2l-11.7 8.6l1.4 1.4L22 46.5v13.8c1.3.5 2.6.8 4 1.1V38zm37.9 0H38v23.4c1.4-.3 2.7-.7 4-1.1V46.5L52.3 54c1.4-1.3 2.6-2.7 3.8-4.2L45.4 42h6.8l6.1 4.5c.3-.5.6-1.1.8-1.6L55.2 42h5.1c.4-1.3.8-2.6 1.1-4" />
             <path fill="#ed4c5c" d="M7.7 49.6c.8 1.1 1.6 2.1 2.5 3.1L22 44.1v-2h-4zM45.5 42l10.7 7.8c.4-.5.7-1 1.1-1.5c.1-.1.1-.2.2-.2c.3-.5.7-1.1 1-1.6L52.2 42z" />
@@ -64,7 +64,7 @@ export const LanguageBtn = () => {
         <button className="flex gap-x-2 cursor-pointer justify-center items-center"
             onClick={() => {changeLang(lang === 'en' ? 'es' : 'en')}}>
             {lang === 'en' ? flags.en : flags.es}
-            <span>{lang === 'en' ? 'En' : 'Es'}</span>
+            <span className="hidden sm:block">{lang === 'en' ? 'En' : 'Es'}</span>
         </button>
     )
 }

@@ -24,10 +24,10 @@ export const IconPhp = ({size="24px"}: Props) => {
                     cx="0" cy="0" r="1" 
                     gradientTransform="translate(38.426 42.169)scale(84.04136)" 
                     gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#aeb2d5"/>
-                        <stop offset=".3" stop-color="#aeb2d5"/>
-                        <stop offset=".75" stop-color="#484c89"/>
-                        <stop offset="1" stop-color="#484c89"/>
+                        <stop stopColor="#aeb2d5"/>
+                        <stop offset=".3" stopColor="#aeb2d5"/>
+                        <stop offset=".75" stopColor="#484c89"/>
+                        <stop offset="1" stopColor="#484c89"/>
                 </radialGradient>
             </defs>
         </svg>

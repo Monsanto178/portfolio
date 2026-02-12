@@ -19,6 +19,7 @@ const CreateCircles = ({arrLength, moveTo, currentIdx}: CircleProp) => {
         defaultMap.map((_,  idx) => {
             return (
                 <button
+                    key={idx}
                     onClick={() => {moveTo(idx)}} 
                     className={`w-fit h-fit cursor-pointer transition-scale duration-300 ease-in-out hover:scale-120 ${currentIdx === idx ? 'scale-120' : ''}`}>
                     <Circle key={idx} fill="orange" stroke="orange" className="w-4 h-4 sm:w-6 sm:-h-6 md:w-5 md:h-5"/>

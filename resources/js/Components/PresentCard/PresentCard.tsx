@@ -24,12 +24,12 @@ export const PresentCard = () => {
                 </h1>
                 <p className="flex flex-col text-center text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
                     <span>
-                        {`${lang === 'en' ? `I'm a passionate and detail-oriented web developer` : 'Soy un desarrollador web apasionado y orientado al detalle'}`}
+                        {`${lang === 'en' ? `I'm a passionate and detail-oriented web developer` : 'Soy un desarrollador web apasionado y orientado al detalle con experiencia en la creación de sitios'}`}
                     </span>
                     <span>
                         {`${lang === 'en' 
                             ? `with experience in building responsive and user-friendly websites.` 
-                            : 'con experiencia en la creación de sitios web responsivos y fáciles de usar.'}`}
+                            : ' web responsivos y fáciles de usar.'}`}
                     </span>
                 </p>
             </div>

@@ -7,15 +7,15 @@ export const IconBootStrap = ({size="24px"}: Props) => {
         <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 128 128">
             <defs>
                 <linearGradient id="SVGog8GhbrR" x1="76.079" x2="523.48" y1="10.798" y2="365.95" gradientTransform="translate(1.11 14.613)scale(.24566)" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#9013fe" />
-                    <stop offset="1" stop-color="#6610f2" />
+                    <stop offset="0" stopColor="#9013fe" />
+                    <stop offset="1" stopColor="#6610f2" />
                 </linearGradient>
                 <linearGradient id="SVGgmyambZz" x1="193.51" x2="293.51" y1="109.74" y2="278.87" gradientTransform="translate(0 52)" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#fff" />
-                    <stop offset="1" stop-color="#f1e5fc" />
+                    <stop offset="0" stopColor="#fff" />
+                    <stop offset="1" stopColor="#f1e5fc" />
                 </linearGradient>
-                <filter id="SVGljEujZNk" width="197" height="249" x="161.9" y="135.46" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="SVGljEujZNk" width="197" height="249" x="161.9" y="135.46" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="8" />

@@ -77,9 +77,11 @@ export const ProjectCard = ({project}: Props) => {
                     </div>
 
                     <div className="flex gap-x-2">
-                        {project.tecnologies.map((el) => {
+                        {project.tecnologies.map((el, idx) => {
                             return (
-                                <div className="flex flex-col gap-x-2 bg-[#6C63FF] py-2 px-6 rounded-[15px]" title={el.name}>
+                                <div
+                                    key={idx} 
+                                    className="flex flex-col gap-x-2 bg-[#6C63FF] py-2 px-6 rounded-[15px]" title={el.name}>
                                     {el.icon}
                                 </div>
                             )
