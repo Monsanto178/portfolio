@@ -23,7 +23,7 @@ export const Banner = () => {
             offset: ["start end", "end start"],
         });
 
-        const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
+        const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
         const moonY = useTransform(scrollMoon, [0.6, 1], ["60%", "20%"]);
         const montainY = useTransform(scrollMontain, [1, 0], ["20%", "0%"]);
 
